@@ -16,7 +16,7 @@ else
     eta = - eigvalue;
     A = Sb - lambda*Sw + eta*eye(d);
 end
-W = L20_function(A,k,W0);
+W = IPU(A,k,W0);
 lambda = trace(W'*Sb*W)/trace(W'*Sw*W);
 W0 = W;
 end
